@@ -40,7 +40,7 @@ jobs:
     - name: Build with diagnostics
       run: |
         ./gradlew clean test --no-daemon --stacktrace --info
-        ./gradlew build --no-daemon || true
+        ./gradlew build --no-daemon
 
   deploy:
     needs: build-test
@@ -49,4 +49,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - run: echo "Deployment would happen here"
+    
+    - name: Deploy
+      run: echo "Add your deployment commands here"
