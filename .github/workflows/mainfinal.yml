@@ -28,6 +28,9 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle', '**/gradle.lockfile') }}
           restore-keys: ${{ runner.os }}-gradle-
 
+      - name: Make gradlew executable
+        run: chmod +x ./CodeAlpha_Task3/gradlew
+        
       - name: Build and test
         run: ./CodeAlpha_Task3/gradlew clean build --no-daemon
 
