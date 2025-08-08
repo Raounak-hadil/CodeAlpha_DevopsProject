@@ -1,0 +1,17 @@
+.git
+.gitignore
+Dockerfile
+.dockerignore
+README*
+LICENSE*
+*.md
+
+node_modules
+npm-debug.log
+Dockerfile.*
+docker-compose*.yml
+
+**/__pycache__
+**/*.py[cod]
+*.swp
+*~
